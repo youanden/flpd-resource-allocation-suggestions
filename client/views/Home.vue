@@ -38,5 +38,24 @@ export default {
   width: 100%;
   height: 100%;
 }
+#filters {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  left: 50px;
+  z-index: 500;
+
+}
+.btn-toggle-points {
+  position: absolute;
+  left: -38px;
+  z-index: 10;
+  background: red;
+  border: 0;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #fff;
+  top: 80px;
+}
 </style>
 
