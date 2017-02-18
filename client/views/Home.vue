@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <counter></counter>
+    BLABLA
     <p>
       To get started, edit files in <code>./client</code> and save.
     </p>
@@ -8,11 +8,9 @@
 </template>
 
 <script>
-import Counter from 'components/Counter'
-
 export default {
   components: {
-    Counter
+
   }
 }
 </script>
