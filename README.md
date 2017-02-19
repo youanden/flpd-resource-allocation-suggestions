@@ -11,6 +11,7 @@ overlay of police response times.
 
 ## Future Plans
 - [ ] Deploy to gh pages so that demo is available to public
+- [ ] Add capriority filter (so that users can filter calls given specific priorities)
 - [ ] Add threshold slider (so that users can modify the response time cut-off as they wish)
 - [ ] Add time of day filtering (different staff / shifts could account for skewing response time averages)
 - [ ] Add date range filtering
@@ -28,6 +29,9 @@ overlay of police response times.
 - Use traffic citation data and stop sign intersections to heatmap potential locations where there is poor visibility of stop signs
 - Use traffic citation data for illegal parking + local public / private parking lots to figure out where effort can be spent to put parking signs (parking one block ahead, etc.)
 - Use accident data in correlation with weather data to ascertain optimal locations for slippery when wet signs.
+
+## Moonshot
+- What if we could build a self-service web app or app that let's a user get an estimate for how soon they can expect police to arrive given an incident description and date/time.
 
 ## Open source
 - Vue.JS / Vuex 2
