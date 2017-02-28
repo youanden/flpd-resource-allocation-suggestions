@@ -41,7 +41,9 @@ Vue.use(VueResource);
 require('../../node_modules/leaflet/dist/images/marker-icon-2x.png');
 require('../../node_modules/leaflet/dist/images/marker-shadow.png');
 
-L.Icon.Default.imagePath = '/static/';
+const basePath = __DEV__ ? '' : '/flpd-resource-allocation-suggestions';
+
+L.Icon.Default.imagePath = basePath + '/static/';
 
 require('leaflet.heat');
 
@@ -84,7 +86,7 @@ export default {
     return {
       zoom: 12,
       center: [26.1402244,-80.1908217],
-      url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       marker: L.latLng(26.1402244,-80.1908217),
       activeMarkers: [],
@@ -113,6 +115,7 @@ export default {
   },
   methods: {
     fetchMapData(type = 'init', codeQuery) {
+      this.$root.loading();
       var reqUrl = this.getMeAUrl();
       if(type !== 'init') {
         this.heatMap.remove();
@@ -122,6 +125,7 @@ export default {
         // TAKE THE RESPONSE BODY AND UPDATE THE STATE activeMarkers
         this.activeMarkers = this.processMarkers(res.body)
         var heatMapMarkers = res.body.map(call => {
+          // TODO - move this to the query to avoid sanity checking in code!
           if(!call.timedisp || !call.actdate || !call.timearrive) {
             return [0,0,0];
           }
@@ -156,8 +160,9 @@ export default {
           radius: 20
         }).addTo(this.mapObject);
 
+        this.$root.loaded();
       }, err => {
-
+        this.$root.loaded();
       });
     },
     getMeAUrl(where = false, limit = 250) {

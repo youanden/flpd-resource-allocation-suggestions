@@ -1,0 +1,15 @@
+<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>Circles</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(4.000000, 4.000000)" stroke="#4371BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path id="Oval-70" fill="#CFDCEE" sketch:type="MSShapeGroup" d="M15,20A5,5 0,1,1 25,20A5,5 0,1,1 15,20" class="istIiUoB_0"></path>
+            <path id="Oval-70-Copy" sketch:type="MSShapeGroup" d="M10,20A10,10 0,1,1 30,20A10,10 0,1,1 10,20" class="istIiUoB_1"></path>
+            <path id="Oval-70-Copy-2" sketch:type="MSShapeGroup" d="M5,20A15,15 0,1,1 35,20A15,15 0,1,1 5,20" class="istIiUoB_2"></path>
+            <path id="Oval-70-Copy-3" sketch:type="MSShapeGroup" d="M0,20A20,20 0,1,1 40,20A20,20 0,1,1 0,20" class="istIiUoB_3"></path>
+        </g>
+    </g>
+<style>.istIiUoB_0{stroke-dasharray:32 34;stroke-dashoffset:33;animation:istIiUoB_draw_0 3700ms ease-in-out 0ms infinite,istIiUoB_fade 3700ms linear 0ms infinite;}.istIiUoB_1{stroke-dasharray:63 65;stroke-dashoffset:64;animation:istIiUoB_draw_1 3700ms ease-in-out 0ms infinite,istIiUoB_fade 3700ms linear 0ms infinite;}.istIiUoB_2{stroke-dasharray:95 97;stroke-dashoffset:96;animation:istIiUoB_draw_2 3700ms ease-in-out 0ms infinite,istIiUoB_fade 3700ms linear 0ms infinite;}.istIiUoB_3{stroke-dasharray:126 128;stroke-dashoffset:127;animation:istIiUoB_draw_3 3700ms ease-in-out 0ms infinite,istIiUoB_fade 3700ms linear 0ms infinite;}@keyframes istIiUoB_draw{100%{stroke-dashoffset:0;}}@keyframes istIiUoB_fade{0%{stroke-opacity:1;}89.1891891891892%{stroke-opacity:1;}100%{stroke-opacity:0;}}@keyframes istIiUoB_draw_0{21.62162162162162%{stroke-dashoffset: 33}48.64864864864865%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes istIiUoB_draw_1{26.126126126126124%{stroke-dashoffset: 64}53.153153153153156%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes istIiUoB_draw_2{30.630630630630627%{stroke-dashoffset: 96}57.657657657657644%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes istIiUoB_draw_3{35.13513513513514%{stroke-dashoffset: 127}62.16216216216216%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}</style></svg>

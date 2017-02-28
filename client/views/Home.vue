@@ -1,20 +1,3 @@
-<template>
-  <div class="page">
-    <map-container></map-container>
-  </div>
-</template>
-
-<script>
-
-import Map from '../components/Map'
-
-export default {
-  components: {
-    'map-container': Map
-  }
-}
-</script>
-
 <style lang='scss'>
 @import "../../node_modules/leaflet/dist/leaflet.css";
 
@@ -55,3 +38,19 @@ export default {
 }
 </style>
 
+<template>
+  <div class="page">
+    <map-container></map-container>
+  </div>
+</template>
+
+<script>
+
+import Map from '../components/Map'
+
+export default {
+  components: {
+    'map-container': Map
+  }
+}
+</script>
