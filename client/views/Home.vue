@@ -16,10 +16,6 @@ export default {
 </script>
 
 <style lang='scss'>
-
-.leaflet-fake-icon-shadow {
-  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/images/marker-shadow.png');
-}
 @import "../../node_modules/leaflet/dist/leaflet.css";
 
 #side {

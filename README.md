@@ -7,7 +7,8 @@ overlay of police response times.
 - [Fort Lauderdale PD Data Portal](https://fortlauderdale.data.socrata.com/)
 
 ## Known Bugs
-- [ ] (Major) Fix issue where heatmap inacurrately calculates dispatch and arrival crossing over midnight boundary
+- [x] (Major) Fix issue where heatmap inacurrately calculates dispatch and arrival crossing over midnight boundary
+- [ ] (Major) For now I am assuming an officer is dispatched the same day the call arrives which isn't always true
 
 ## Future Plans
 - [ ] Deploy to gh pages so that demo is available to public
@@ -39,6 +40,7 @@ overlay of police response times.
 - leaflet.heat
 - Open Street Maps
 - DateFNS
+- Webpack / Vbuild
 
 ## Development Instructions
 
@@ -49,7 +51,7 @@ $ npm install
 To develop:
 
 ```bash
-$ npm run dev
+$ vbuild client/index.js --dev
 ```
 
 To build for production:
