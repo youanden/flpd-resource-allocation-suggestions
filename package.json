@@ -1,14 +1,16 @@
 {
   "name": "Fort-Lauderdale-Police-Deployment-Map",
   "version": "0.1.0",
-  "description": "My Superb Vue Project",
+  "description": "Potentially provides insight into resource allocation for patrol deployment",
   "main": "client/index.js",
   "scripts": {
     "test": "testcafe all tests/index.js --app \"npm run dev\" --app-init-delay 10000",
-    "build": "webpack --config build/webpack.prod.js",
-    "dev": "node build/server.js",
+    "dev": "vbuild -d client/index.js",
+    "build": "vbuild client/index.js",
+    "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint client/* --ext .js --ext .vue"
   },
+  "homepage": "/flpd-resource-allocation-suggestions/",
   "author": "Us 4",
   "license": "MIT",
   "dependencies": {
@@ -46,6 +48,7 @@
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.9.0",
     "friendly-errors-webpack-plugin": "^1.1.2",
+    "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.22.0",
     "offline-plugin": "^4.5.3",
     "postcss-loader": "^0.9.1",
