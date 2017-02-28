@@ -3,6 +3,9 @@
 The goal of this project is to help in the allocation of police resources by facilitating a visual
 overlay of police response times.
 
+## demo
+- [Preview Build](https://youanden.github.io/flpd-resource-allocation-suggestions/)
+
 ## Resources
 - [Fort Lauderdale PD Data Portal](https://fortlauderdale.data.socrata.com/)
 
