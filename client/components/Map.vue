@@ -41,9 +41,8 @@ Vue.use(VueResource);
 require('../../node_modules/leaflet/dist/images/marker-icon-2x.png');
 require('../../node_modules/leaflet/dist/images/marker-shadow.png');
 
-const basePath = __DEV__ ? '' : '/flpd-resource-allocation-suggestions';
 
-L.Icon.Default.imagePath = basePath + '/static/';
+L.Icon.Default.imagePath = process.env.basePath + 'static/';
 
 require('leaflet.heat');
 
@@ -150,8 +149,8 @@ export default {
           }
 
           return [
-            call.location.coordinates[0],
             call.location.coordinates[1],
+            call.location.coordinates[0],
             seriousness
           ];
         });
@@ -171,7 +170,7 @@ export default {
     processMarkers(markers) {
       return markers.filter(m => m.location)
         .map(m => ({
-          latlng: L.latLng(m.location.coordinates[0], m.location.coordinates[1]),
+          latlng: L.latLng(m.location.coordinates[1], m.location.coordinates[0]),
           content: `
             <b>Case: ${Number(m.case_id)}</b><br>
             ${this.popupFields.map(field => (
@@ -182,7 +181,7 @@ export default {
     },
     processMarkersForHeatMap(markers) {
       return markers.filter(m => m.location)
-        .map(m => [m.location.coordinates[0], m.location.coordinates[1], 1]);
+        .map(m => [m.location.coordinates[1], m.location.coordinates[0], 1]);
     },
     filterSearch(e) {
       var codeQuery = e.map(c => `"${c.name}"`).join(" OR ncodedesc=");

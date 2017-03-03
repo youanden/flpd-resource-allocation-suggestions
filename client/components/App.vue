@@ -3,7 +3,7 @@
     <router-view></router-view>
     <transition name="fade">
       <div class="loading-container" v-if="isLoading">
-        <img class="preloader" src="/static/animated_preloader.svg" />
+        <img class="preloader" :src="basePath + 'static/animated_preloader.svg'" />
       </div>
     </transition>
   </div>
@@ -12,7 +12,8 @@
 export default {
   data() {
     return {
-      isLoading: true
+      isLoading: true,
+      basePath: process.env.basePath
     };
   },
   methods: {
@@ -51,12 +52,11 @@ body {
 .fade-enter, .fade-leave-to {
   opacity: 0
 }
+//
 .loading-container {
   position: absolute;
-  top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   .preloader {
     position: absolute;
     right: 20px;
