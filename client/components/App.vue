@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <home></home>
     <transition name="fade">
       <div class="loading-container" v-if="isLoading">
         <img class="preloader" :src="basePath + 'static/animated_preloader.svg'" />
@@ -9,7 +9,12 @@
   </div>
 </template>
 <script>
+import Home from '../views/Home';
+
 export default {
+  components: {
+    Home
+  },
   data() {
     return {
       isLoading: true,
@@ -52,7 +57,6 @@ body {
 .fade-enter, .fade-leave-to {
   opacity: 0
 }
-//
 .loading-container {
   position: absolute;
   right: 0;

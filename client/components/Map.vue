@@ -32,11 +32,12 @@ import Vue2Leaflet from 'vue2-leaflet';
 import Multiselect from 'vue-multiselect';
 import VueResource from 'vue-resource';
 
-import { compose } from 'lodash/fp';
 import dateFns, { parse, format, startOfDay, addHours, addMinutes, differenceInMinutes } from 'date-fns';
 
 Vue.use(VueResource);
 
+// Multiselect styles
+require('../../node_modules/vue-multiselect/dist/vue-multiselect.min.css');
 // Leaflet static image dependencies
 require('../../node_modules/leaflet/dist/images/marker-icon-2x.png');
 require('../../node_modules/leaflet/dist/images/marker-shadow.png');
@@ -93,6 +94,7 @@ export default {
       heatMap: null,
       mapObject: null,
       // SELECT
+      // TODO: Refactor into separate Filters Component - Map should just receive points and settings
       filters: {
         selectedCodes: [],
         availableOptions: [],

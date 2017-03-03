@@ -1,34 +1,32 @@
 {
   "name": "Fort-Lauderdale-Police-Deployment-Map",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Potentially provides insight into resource allocation for patrol deployment",
   "main": "client/index.js",
   "scripts": {
     "test": "testcafe all tests/index.js --app \"npm run dev\" --app-init-delay 10000",
     "dev": "vbuild client/index.js -d --config vbuild.config.js",
     "build": "vbuild client/index.js --config vbuild.config.js",
+    "stats": "vbuild client/index.js --config vbuild.config.js --stats",
     "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint client/* --ext .js --ext .vue"
   },
   "homepage": "/flpd-resource-allocation-suggestions/",
-  "author": "Us 4",
+  "author": "Georgiy Slobodenyuk",
   "license": "MIT",
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "date-fns": "^1.27.2",
     "leaflet.heat": "^0.2.0",
     "leaflet.markercluster": "^1.0.3",
-    "lodash": "^4.17.4",
     "node-sass": "^4.5.0",
     "promise-polyfill": "^6.0.2",
     "sass-loader": "^6.0.1",
     "vue": "^2.1.0",
     "vue-multiselect": "next",
     "vue-resource": "^1.2.0",
-    "vue-router": "^2.0.0",
     "vue2-leaflet": "^0.0.32",
-    "vuex": "^2.0.0",
-    "vuex-router-sync": "^3.0.0"
+    "vuex": "^2.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -50,7 +48,6 @@
     "friendly-errors-webpack-plugin": "^1.1.2",
     "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.22.0",
-    "offline-plugin": "^4.5.3",
     "postcss-loader": "^0.9.1",
     "postcss-nested": "^1.0.0",
     "raw-loader": "^0.5.1",
@@ -59,6 +56,7 @@
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.3",
     "webpack": "2.2.0",
+    "webpack-bundle-analyzer": "^2.3.0",
     "webpack-dev-middleware": "^1.8.1",
     "webpack-hot-middleware": "^2.12.2"
   }

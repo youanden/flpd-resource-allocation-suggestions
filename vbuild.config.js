@@ -16,10 +16,17 @@ module.exports = options => ({
   filename: {
     static: 'static/[name].[ext]'
   },
-  webpack(webpackConfig) {
-    if(!options.dev) {
-      webpackConfig.output.publicPath = '/flpd-resource-allocation-suggestions/';
+  webpack(config) {
+    if (options.stats) {
+      const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+      config.plugins.push(new BundleAnalyzerPlugin())
     }
-    return webpackConfig;
+    if(!options.dev) {
+      config.output.publicPath = '/flpd-resource-allocation-suggestions/';
+    }
+    return config;
+  },
+  production: {
+    sourceMap: false
   }
 })
